@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import { Spinner, Card } from '../components';
+import { Spinner, Card, Separator } from '../components';
 import { Theme } from '../constants';
 
 import { connect } from 'react-redux';
@@ -80,6 +80,9 @@ class ShopScreen extends React.Component {
                 />  
             ))}
           </View>
+          <Separator/>
+          <Separator/>
+          <Separator/>
         </View>
         :
         <Text style={styles.message}>Error...</Text>}
@@ -103,7 +106,8 @@ const styles = StyleSheet.create({
   productlist: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    height: Theme.SIZES.HEIGHT
+    height: Theme.SIZES.HEIGHT,
+    justifyContent: "flex-start"
   },
   scrollview: {
     position: 'absolute',

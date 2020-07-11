@@ -202,13 +202,15 @@ const styles = StyleSheet.create({
     elevation: 1
   },
   size: {
-    height: 42,
+    width: 40,
+    height: 40,
     borderRadius: 14,
     marginLeft: Theme.SIZES.BASE,
-    flex: 0.12,
     justifyContent: "center",
     alignItems: "center",
-    elevation: 1
+    backgroundColor: Theme.COLORS.WHITE,
+    borderWidth: 1,
+    borderColor: Theme.COLORS.MUTED
   },
   discount: {
     width: 207,

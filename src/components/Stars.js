@@ -47,7 +47,7 @@ class Stars extends React.Component {
         );
     }
 
-    _renderStar(size, stars, calification) {
+    _renderStar(size, stars, calification, score) {
         return (
             <View style={styles.container}>
                 { calification.sort((a, b) => (a.id > b.id) ? 1 : -1).slice(0, stars).map((item) => (
@@ -55,7 +55,7 @@ class Stars extends React.Component {
                         key={item.id}
                         size={size}
                         name={'star-selected'}
-                        color={Theme.COLORS[item.color]}
+                        color={score?Theme.COLORS.MUTED:Theme.COLORS[item.color]}
                     />
                 ))}
             </View>
@@ -67,7 +67,7 @@ class Stars extends React.Component {
         return (
             <View style={active&&styles.margin}>
                 <View style={styles.container}>
-                    {score||review||card? this._renderStar(size, stars, calification) : this._renderFiveStar(size, active)}
+                    {score||review||card? this._renderStar(size, stars, calification, score) : this._renderFiveStar(size, active)}
                     {card&&
                     <Text style={styles.text}>
                         ({rating.total})
