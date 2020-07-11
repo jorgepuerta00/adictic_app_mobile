@@ -154,7 +154,7 @@ Card.propTypes = {
       height: "100%"
     },
     containerSmall: {
-      width: 176,
+      width: (Theme.SIZES.WIDTH/2) - (Theme.SIZES.BASE*1.5),
       height: 240,
       borderRadius: 14,
       marginLeft: Theme.SIZES.BASE
